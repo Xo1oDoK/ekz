@@ -1,0 +1,39 @@
+﻿<Window x:Class="ekz.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ekz"
+        mc:Ignorable="d"
+         Title="Форма партнёра" Height="400" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <StackPanel Margin="0,5">
+                <TextBlock Text="Наименование"/>
+                <TextBox Text="{Binding name}" />
+            </StackPanel>
+            <ComboBox ItemsSource="{Binding partner_type}" SelectedValuePath="Id" DisplayMemberPath="Name" SelectedValue="{Binding partner_type}" Margin="0,5" />
+            <StackPanel Margin="0,5">
+                <TextBlock Text="Адрес"/>
+                <TextBox Text="{Binding address}" />
+            </StackPanel>
+            <StackPanel Margin="0,5">
+                <TextBlock Text="ФИО директора"/>
+                <TextBox Text="{Binding director_name}" />
+            </StackPanel>
+            <StackPanel Margin="0,5">
+                <TextBlock Text="Телефон"/>
+                <TextBox Text="{Binding phone}" />
+            </StackPanel>
+            <StackPanel Margin="0,5">
+                <TextBlock Text="Email"/>
+                <TextBox Text="{Binding email}" />
+            </StackPanel>
+            <StackPanel Margin="0,5">
+                <TextBlock Text="Рейтинг"/>
+                <TextBox Text="{Binding rating}" />
+            </StackPanel>
+            <Button Content="Сохранить" Click="Save_Click" Width="100" Margin="0,10,0,0" HorizontalAlignment="Left" />
+        </StackPanel>
+    </Grid>
+</Window>
